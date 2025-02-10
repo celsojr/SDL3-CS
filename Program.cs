@@ -17,7 +17,7 @@ namespace SDL3_CS
             //     return;
             // }
 
-            window = SDL.SDL_CreateWindow("examples/renderer/clear", 640, 480, 0);
+            window = SDL.SDL_CreateWindow("SDL3 with C#", 640, 480, 0);
             if (window == IntPtr.Zero)
             {
                 Console.WriteLine($"Couldn't create window: {SDL.SDL_GetError()}");
@@ -68,11 +68,13 @@ namespace SDL3_CS
         static void RenderFrame()
         {
             double now = SDL.SDL_GetTicks() / 1000.0;
-            float red = (float)(0.5 + 0.5 * Math.Sin(now));
-            float green = (float)(0.5 + 0.5 * Math.Sin(now + Math.PI * 2 / 3));
-            float blue = (float)(0.5 + 0.5 * Math.Sin(now + Math.PI * 4 / 3));
+            
+            // Scale the color values to the 0-255 range
+            byte red   = (byte)((0.5 + 0.5 * Math.Sin(now)) * 255);
+            byte green = (byte)((0.5 + 0.5 * Math.Sin(now + Math.PI * 2 / 3)) * 255);
+            byte blue  = (byte)((0.5 + 0.5 * Math.Sin(now + Math.PI * 4 / 3)) * 255);
 
-            SDL.SDL_SetRenderDrawColor(renderer, (byte)red, (byte)green, (byte)blue, (byte)1.0f);
+            SDL.SDL_SetRenderDrawColor(renderer, red, green, blue, 255);  // 255 = full opacity
             SDL.SDL_RenderClear(renderer);
             SDL.SDL_RenderPresent(renderer);
         }
