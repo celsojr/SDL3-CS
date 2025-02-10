@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net9.0</TargetFramework>
+    <RootNamespace>SDL3_CS</RootNamespace>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+
+  <ItemGroup>
+		<!-- <Compile Include="lib\FAudio\csharp\FAudio.cs" /> -->
+		<!-- <Compile Include="lib\SDL3-CS\SDL3\SDL3.Core.cs" /> -->
+		<!-- <Compile Include="lib\WellspringCS\WellspringCS.cs" /> -->
+		<!-- <Compile Include="lib\dav1dfile\csharp\dav1dfile.cs" /> -->
+	</ItemGroup>
+
+  <!-- <Import Project="..\moonworks_test\CopyMoonlibs.targets" /> -->
+
+</Project>
