@@ -10,12 +10,10 @@ namespace SDL3_CS
 
         static void Main(string[] args)
         {
-            // if (SDL.SDL_Init(SDL.SDL_INIT_VIDEO) < 0)
-            // if (SDL.SDL_Init(SDL.SDL_InitFlags.SDL_INIT_VIDEO))
-            // {
-            //     Console.WriteLine($"Couldn't initialize SDL: {SDL3.SDL.SDL_GetError()}");
-            //     return;
-            // }
+            if (!SDL.SDL_Init(SDL.SDL_InitFlags.SDL_INIT_VIDEO)) {
+                Console.WriteLine($"Couldn't initialize SDL: {SDL3.SDL.SDL_GetError()}");
+                return;
+            }
 
             window = SDL.SDL_CreateWindow("SDL3 with C#", 640, 480, 0);
             if (window == IntPtr.Zero)
