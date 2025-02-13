@@ -12,6 +12,7 @@ namespace SDL3_CS
         {
             if (!SDL.SDL_Init(SDL.SDL_InitFlags.SDL_INIT_VIDEO)) {
                 Console.WriteLine($"Couldn't initialize SDL: {SDL3.SDL.SDL_GetError()}");
+                SDL.SDL_Quit();
                 return;
             }
 
@@ -23,7 +24,6 @@ namespace SDL3_CS
                 return;
             }
 
-            // renderer = SDL.SDL_CreateRenderer(window, null, 0);
             renderer = SDL.SDL_CreateRenderer(window, null);
             if (renderer == IntPtr.Zero)
             {
@@ -55,7 +55,6 @@ namespace SDL3_CS
             SDL.SDL_Event e;
             while (SDL.SDL_PollEvent(out e))
             {
-                // if (e.type == SDL.SDL_EVENT_QUIT)
                 if (e.type == (nint)SDL.SDL_EventType.SDL_EVENT_QUIT)
                 {
                     running = false;
