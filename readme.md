@@ -95,6 +95,23 @@ LD_DEBUG=libs bin/Debug/net9.0/SDL3-CS
 DYLD_PRINT_LIBRARIES=1 bin/Debug/net9.0/SDL3-CS
 ```
 
+### **Windows**  
+```powershell
+# Start the application
+[System.Diagnostics.Process]::Start("bin\Debug\net9.0\SDL3-CS.exe")
+
+# Wait a moment, then check the loaded DLLs
+Get-Process -Name "SDL3-CS" | Select-Object -ExpandProperty Modules
+```
+
+Alternatively, you can use [https://learn.microsoft.com/en-us/sysinternals/downloads/listdlls](https://learn.microsoft.com/en-us/sysinternals/downloads/listdlls) for a more detailed view:  
+
+```powershell
+.\listdlls.exe bin\Debug\net9.0\SDL3-CS.exe
+```
+
+Or **Process Monitor (ProcMon)** for real-time tracking.  
+
 # Notes
 - This is a **template project**, consider this as a starting point for prototyping.
 - **SDL3-CS is required** for this project to function properly (included in the thirdparty folder).
