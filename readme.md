@@ -5,7 +5,7 @@ A cross-platform C# template for **SDL3**, providing a simple starting point for
 Some C# developers may just want to experiment and prototype with SDL3 without having to learn C/C++ or any other language.
 
 ## Dependencies  
-- **SDL3-CS** (Simple DirectMedia Layer 3 - Already included in the lib folder)  
+- **SDL3-CS** (Simple DirectMedia Layer 3 - Already included in the thirdpartyfolder)  
   - Download: [https://github.com/flibitijibibo/SDL3-CS](https://github.com/flibitijibibo/SDL3-CS)  
 - **.NET 9.0+**  
   - Install via [https://dotnet.microsoft.com/](https://dotnet.microsoft.com/)  
@@ -84,6 +84,6 @@ DYLD_PRINT_LIBRARIES=1 ./bin/Debug/net9.0/SDL3-CS
 
 # Notes
 - This is a **template project**, consider this as a starting point for prototyping.
-- **SDL3-CS is required** for this project to function properly (included in the lib folder).
+- **SDL3-CS is required** for this project to function properly (included in the thirdpartyfolder).
 - If you encounter issues with missing shared libraries, ensure your **library paths** are correctly set.
 
