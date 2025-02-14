@@ -9,4 +9,13 @@
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
 
+  <PropertyGroup>
+      <DefaultItemExcludes>$(DefaultItemExcludes);SDL3.Legacy.cs</DefaultItemExcludes>
+  </PropertyGroup>
+
+  <ItemGroup>
+       <!-- Prevents conflicts with the legacy SDL bindings -->
+      <Compile Remove="thirdparty/SDL3-CS/SDL3/SDL3.Legacy.cs" />
+  </ItemGroup>
+
 </Project>

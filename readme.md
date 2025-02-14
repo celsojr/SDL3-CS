@@ -64,7 +64,7 @@ mv bin/Debug/net9.0/libSDL3.0.dylib bin/Debug/net9.0/SDL3.dylib
 
 ### Linux
 ```sh
-mv bin/Debug/net9.0/libSDL3.0.so.0 bin/Debug/net9.0/SDL3.so.0
+mv bin/Debug/net9.0/libSDL3.so.0 bin/Debug/net9.0/SDL3.so
 ```
 
 # Set Environment Variables (if necessary) & Run
