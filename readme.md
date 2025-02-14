@@ -79,7 +79,20 @@ bin\Debug\net9.0\SDL3-CS.exe
 ```sh
 export DYLD_LIBRARY_PATH=$PWD/bin/Debug/net9.0:$DYLD_LIBRARY_PATH
 
-DYLD_PRINT_LIBRARIES=1 ./bin/Debug/net9.0/SDL3-CS
+bin/Debug/net9.0/SDL3-CS
+```
+
+## Debugging Library Loads
+To check the loaded libraries:
+
+### Linux
+```sh
+LD_DEBUG=libs bin/Debug/net9.0/SDL3-CS
+```
+
+### macOS
+```sh
+DYLD_PRINT_LIBRARIES=1 bin/Debug/net9.0/SDL3-CS
 ```
 
 # Notes
