@@ -98,7 +98,9 @@ DYLD_PRINT_LIBRARIES=1 bin/Debug/net9.0/SDL3-CS
 ### **Windows**  
 ```powershell
 # Start the application
-[System.Diagnostics.Process]::Start("bin\Debug\net9.0\SDL3-CS.exe")
+"$Env:USERPROFILE\source\repos\SDL3-CS" |
+    % { "$_\bin\Debug\net9.0\SDL3-CS.exe" } |
+    % { [System.Diagnostics.Process]::Start($_) }
 
 # Wait a moment, then check the loaded DLLs
 Get-Process -Name "SDL3-CS" | Select-Object -ExpandProperty Modules
