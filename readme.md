@@ -55,7 +55,7 @@ unzip SDL3-CS-linux.zip -d bin/Debug/net9.0
 ```
 
 # Rename Libraries (if necessary)
-Some platforms may require renaming `libSDL3.0.dylib` to `SDL3.dylib` for compatibility.
+Some platforms may require renaming for compatibility.
 
 ### macOS
 ```sh
@@ -68,13 +68,6 @@ mv bin/Debug/net9.0/libSDL3.so.0 bin/Debug/net9.0/SDL3.so
 ```
 
 # Set Environment Variables (if necessary) & Run
-### Windows (PowerShell)
-```powershell
-$env:PATH = "$PWD\bin\Debug\net9.0;" + $env:PATH
-
-bin\Debug\net9.0\SDL3-CS.exe
-```
-
 ### macOS / Linux (Bash)
 ```sh
 export DYLD_LIBRARY_PATH=$PWD/bin/Debug/net9.0:$DYLD_LIBRARY_PATH
