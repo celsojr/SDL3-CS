@@ -107,6 +107,12 @@ Alternatively, you can use [https://learn.microsoft.com/en-us/sysinternals/downl
 
 Or **Process Monitor (ProcMon)** for real-time tracking.  
 
+If you are writing a program with the c lang, you can also run:
+```sh
+# x86 or x64 only (do not work on arm64)
+objdump -p program.exe | grep DLL
+```
+
 # Notes
 - This is a **template project**, consider this as a starting point for prototyping.
 - **SDL3-CS is required** for this project to function properly (included in the thirdparty folder).
